@@ -43,24 +43,5 @@ function App() {
   return (
     <div className="container">
       <h1>🎧 Spotify Playlist Manager</h1>
-      <PlaylistSelector
-        playlists={playlists}
-        selected={selected}
-        onSelect={handleSelect}
-      />
-      <button onClick={fetchPreview}>Preview Selected</button>
 
-      {Object.entries(previewData).map(([id, data]) => (
-        <PlaylistPreview
-          key={id}
-          playlistName={data.name}
-          tracks={data.tracks}
-        />
-      ))}
-
-      <TransferButton onTransfer={handleTransfer} disabled={selected.length === 0} />
-    </div>
-  );
-}
-
-export default App;
+      {/*
